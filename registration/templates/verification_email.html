@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verify your email address</title>
+<style>
+.mailverify {
+  background: #eff1fb;
+border: 2px solid transparent;
+box-sizing: border-box;
+margin-left: 28%;
+width: 440px;
+height: 400px;
+padding: 18px;
+box-shadow: 0px 0px 7px 0px #c4bdea;
+border-radius: 7px;
+color: #252525;
+font-family: Arial;
+text-align: center;
+font-size: 16px;
+}
+
+.mailverify a {
+  border: 2px solid transparent;
+box-sizing: border-box;
+cursor: pointer;
+font-family: Arial;
+font-size: 17px;
+font-weight: 500;
+padding: 10px 35px;
+text-align: center;
+display:inline-block;
+background:#8f9aef;
+color: #fff;
+box-shadow: 0px 3px 4px 0px #c4bdea;
+border-radius:50em;
+}
+
+.mailverify img{
+width: 280px;
+height: 200px;
+}
+
+
+</style>
+</head>
+
+<body>
+	<div class="mailverify">
+		<img src="https://t3.ftcdn.net/jpg/02/94/88/76/360_F_294887654_1ypvH8dBMfGxlU0anxHqScr2GA1PQJOI.jpg">
+		<p>Hi {{ username }},</p>
+		<p>Here is your verification code: {{ verification_code }}</p>
+		<p>Best regards,<br>AutoDialer Team</p>
+	</div>
+</body>
+</html>

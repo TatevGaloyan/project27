@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homestyle.css' %}">
+<body>
+    <div class="emailverify">
+            <img src="{% static 'images/nkar.avif' %}">
+    <h2>Verification email sent!</h2>
+    <br>
+    
+	<p>We have sent a verification code to <br>your registered email address.</p>
+    <form method="post" action="{% url 'verify_email' %}">
+        {% csrf_token %}
+        <input type="text" placeholder="Verification code" id="code" name="code">
+        {% if error_message %}
+            <p style="color: red; font-size: 81%;">{{ error_message }}</p>
+        {% endif %}
+        <button type="submit" class="verify">Verify</button>
+    </form>
+    </div>
+</body>
+</html>
